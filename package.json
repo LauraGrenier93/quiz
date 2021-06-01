@@ -1,0 +1,30 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "program to play a quiz",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauraGrenier93/quiz.git"
+  },
+  "author": "Laura GRENIER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LauraGrenier93/quiz/issues"
+  },
+  "homepage": "https://github.com/LauraGrenier93/quiz#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2"
+  }
+}
