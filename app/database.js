@@ -3,14 +3,10 @@ const {
   Sequelize,
 } = require('sequelize');
 
-const sequelize = new Sequelize(DATABASE_URL, {
-  define: {
-    timestamps: false,
-  },
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
   ssl: true,
   protocol: 'postgres',
-  logging: true,
   dialectOptions: {
     ssl: {
       require: true,
@@ -18,6 +14,7 @@ const sequelize = new Sequelize(DATABASE_URL, {
     },
   },
 });
+
 
 module.exports = sequelize;
 
