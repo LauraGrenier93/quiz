@@ -10,6 +10,7 @@ The implementation of the site architecture corresponds to a Model View Controll
 * Laura Grenier
 
 ## Stack
+
   * NODE.js
     * Express
     * Express-session
@@ -30,3 +31,7 @@ The implementation of the site architecture corresponds to a Model View Controll
 * Install all [NPM](https://www.npmjs.com/) and all the npm packages you need for this project => ``` npm i ```
 * To launch the API => ``` npm start ```
 * Go to your broswer, at the http://localhost:<PORT_you_put_in_your_.env.back>/v1
+
+## Putting the project online
+
+the project has been posted on heroku: https://quizzes-test.herokuapp.com/
