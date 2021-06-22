@@ -49,7 +49,7 @@ const quizzController = {
     try {
       const  userAnswers = req.body;
       const quizUrl = parseInt(req.params.id);
-      //console.log('user response retrieved from the URL',userAnswers);
+      // console.log('user response retrieved from the URL',userAnswers);
       let score=0;
       let index=1;
       const quiz = await Quiz.findByPk(quizUrl,{
@@ -58,17 +58,15 @@ const quizzController = {
         ]
       });
       for(const question of quiz.questions){
-          const userAnswersKey = `question_${index}`;
-          //console.log('the key to userAnswerKey',userAnswersKey);
-        const userAnswer = userAnswers[userAnswersKey];
-        //console.log('value of userAnswerKey',userAnswer);
-        if(parseInt(userAnswer,10) === question.good_answer.id){
+          // console.log('the key to userAnswerKey',userAnswersKey);
+        // console.log('value of question.good_answer.id',question.good_answer.id);
+        // console.log('value of req.body[`question_${question.id}`]',req.body[`question_${question.id}`]);
+        if(parseInt( req.body[`question_${question.id}`],10) === question.good_answer.id){
           score++;        
         }
         index++;
       }
-    
-      //console.log('the score is ',score);
+      console.log('the score is ',score);
       res.render('score_quiz', {score, quiz,userAnswers});
     } catch (err) {
       req.session.flash ="Nous avons eu un problème technique, Merci de réessayer."
